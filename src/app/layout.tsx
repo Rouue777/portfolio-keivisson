@@ -28,7 +28,12 @@ export const metadata: Metadata = {
     "edição para YouTube",
     "edição de podcasts",
     "edição para redes sociais",
+    "edição de Shorts e Reels",
+    "legendas animadas",
+    "motion graphics",
+    "thumbnails para YouTube",
   ],
+  category: "Edição de vídeo",
   robots: {
     index: true,
     follow: true,

@@ -14,13 +14,8 @@ export function VideoCard({ video, onSelect }: VideoCardProps) {
     : `Abrir detalhes de ${video.title}`;
 
   return (
-    <article className="group overflow-hidden rounded-xl border border-border bg-card transition-[transform,border-color,box-shadow] hover:-translate-y-1 hover:border-primary/70 hover:shadow-xl hover:shadow-primary/10 focus-within:-translate-y-1 focus-within:border-primary-light">
-      <button
-        type="button"
-        aria-label={actionLabel}
-        className="relative block aspect-video w-full overflow-hidden bg-background text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-light"
-        onClick={(event) => onSelect(video, event.currentTarget)}
-      >
+    <article className="group relative h-full">
+      <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-border bg-background shadow-lg shadow-black/10 transition-[transform,border-color,box-shadow] group-hover:-translate-y-1 group-hover:border-primary/70 group-hover:shadow-xl group-hover:shadow-primary/10 group-focus-within:-translate-y-1 group-focus-within:border-primary-light group-focus-within:ring-2 group-focus-within:ring-primary-light group-focus-within:ring-offset-2 group-focus-within:ring-offset-background-secondary motion-reduce:transform-none">
         {video.thumbnail ? (
           <Image
             src={video.thumbnail}
@@ -53,16 +48,23 @@ export function VideoCard({ video, onSelect }: VideoCardProps) {
             {video.duration}
           </span>
         ) : null}
-      </button>
+      </div>
 
-      <div className="p-5">
+      <div className="pt-4">
         <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-primary-light">
           {video.category}
         </p>
-        <h3 className="font-heading text-lg font-semibold text-text">
+        <h3 className="font-heading text-lg font-semibold leading-snug text-text transition-colors group-hover:text-primary-light group-focus-within:text-primary-light">
           {video.title}
         </h3>
       </div>
+
+      <button
+        type="button"
+        aria-label={actionLabel}
+        className="absolute inset-0 z-10 cursor-pointer rounded-xl focus-visible:outline-none"
+        onClick={(event) => onSelect(video, event.currentTarget)}
+      />
     </article>
   );
 }

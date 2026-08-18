@@ -81,7 +81,7 @@ export function VideoModal({ video, onClose, onExitComplete }: VideoModalProps) 
       {video ? (
         <motion.div
           key={video.id}
-          className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/80 p-4 backdrop-blur-sm"
+          className="fixed inset-0 z-[100] flex items-start justify-center overflow-y-auto bg-black/80 p-4 backdrop-blur-sm"
           role="presentation"
           initial={shouldReduceMotion ? false : { opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -98,7 +98,7 @@ export function VideoModal({ video, onClose, onExitComplete }: VideoModalProps) 
             aria-labelledby="video-modal-title"
             aria-describedby={descriptionId}
             tabIndex={-1}
-            className="w-full max-w-5xl overflow-hidden rounded-2xl border border-border bg-card shadow-2xl shadow-black/50"
+            className="my-auto w-full max-w-5xl overflow-hidden rounded-2xl border border-border bg-card shadow-2xl shadow-black/50"
             initial={shouldReduceMotion ? false : { opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: shouldReduceMotion ? 1 : 0.98 }}
@@ -116,7 +116,7 @@ export function VideoModal({ video, onClose, onExitComplete }: VideoModalProps) 
             </p>
             <h2
               id="video-modal-title"
-              className="truncate font-heading text-lg font-semibold text-text sm:text-xl"
+              className="break-words font-heading text-lg font-semibold text-text sm:text-xl"
             >
               {video.title}
             </h2>
