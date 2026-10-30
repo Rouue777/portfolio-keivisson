@@ -43,9 +43,9 @@ export const portfolioVideos: PortfolioVideo[] = [
   },
   {
     id: "projeto-06",
-    title: "Novo projeto em breve",
+    title: "The end of humans",
     category: "YouTube",
-    thumbnail: "/images/portfolio/thumbmail2.png",
+    thumbnail: "/images/portfolio/robos.jpeg",
     youtubeId: null,
     duration: null,
   },
