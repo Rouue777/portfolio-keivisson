@@ -46,7 +46,7 @@ export const portfolioVideos: PortfolioVideo[] = [
     title: "The end of humans",
     category: "YouTube",
     thumbnail: "/images/portfolio/robos.jpeg",
-    youtubeId: null,
+    youtubeId: "Wpn7_pxWQ9w",
     duration: null,
   },
 ];
